@@ -15,6 +15,7 @@
 		70B5F6F41A17687B003155D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B5F6F31A17687B003155D4 /* Images.xcassets */; };
 		70B5F6F71A17687B003155D4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70B5F6F51A17687B003155D4 /* LaunchScreen.xib */; };
 		70B5F7031A17687B003155D4 /* Find_My_LuggageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B5F7021A17687B003155D4 /* Find_My_LuggageTests.swift */; };
+		70D5C69A1A179759005699C5 /* LuggageBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D5C6991A179759005699C5 /* LuggageBeacon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		70B5F6FC1A17687B003155D4 /* Find My LuggageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Find My LuggageTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B5F7011A17687B003155D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70B5F7021A17687B003155D4 /* Find_My_LuggageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Find_My_LuggageTests.swift; sourceTree = "<group>"; };
+		70D5C6991A179759005699C5 /* LuggageBeacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LuggageBeacon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +66,6 @@
 		70B5F6DE1A17687B003155D4 = {
 			isa = PBXGroup;
 			children = (
-				409F194A1A177E2B00FC7B8A /* CoreLocation.framework */,
 				70B5F6E91A17687B003155D4 /* Find My Luggage */,
 				70B5F6FF1A17687B003155D4 /* Find My LuggageTests */,
 				70B5F6E81A17687B003155D4 /* Products */,
@@ -85,11 +86,12 @@
 			children = (
 				70B5F6EC1A17687B003155D4 /* AppDelegate.swift */,
 				70B5F6EE1A17687B003155D4 /* ViewController.swift */,
+				40B27D0F1A1774F70089DB77 /* BeaconLocator.swift */,
+				70D5C6991A179759005699C5 /* LuggageBeacon.swift */,
 				70B5F6F01A17687B003155D4 /* Main.storyboard */,
 				70B5F6F31A17687B003155D4 /* Images.xcassets */,
 				70B5F6F51A17687B003155D4 /* LaunchScreen.xib */,
 				70B5F6EA1A17687B003155D4 /* Supporting Files */,
-				40B27D0F1A1774F70089DB77 /* BeaconLocator.swift */,
 			);
 			path = "Find My Luggage";
 			sourceTree = "<group>";
@@ -97,6 +99,7 @@
 		70B5F6EA1A17687B003155D4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				409F194A1A177E2B00FC7B8A /* CoreLocation.framework */,
 				70B5F6EB1A17687B003155D4 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -167,10 +170,11 @@
 				TargetAttributes = {
 					70B5F6E61A17687B003155D4 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = G75289R4VK;
+						DevelopmentTeam = 4RH72U5FQ6;
 					};
 					70B5F6FB1A17687B003155D4 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 4RH72U5FQ6;
 						TestTargetID = 70B5F6E61A17687B003155D4;
 					};
 				};
@@ -221,6 +225,7 @@
 			files = (
 				40B27D101A1774F70089DB77 /* BeaconLocator.swift in Sources */,
 				70B5F6EF1A17687B003155D4 /* ViewController.swift in Sources */,
+				70D5C69A1A179759005699C5 /* LuggageBeacon.swift in Sources */,
 				70B5F6ED1A17687B003155D4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

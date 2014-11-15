@@ -9,48 +9,29 @@
 import Foundation
 import CoreLocation
 
+let PROXIMITY_ID = "f7826da6-4fa2-4e98-8024-bc5b71e0893e"
+
 class BeaconLocator : NSObject, CLLocationManagerDelegate {
     
-    var region:CLBeaconRegion
-    var locationManager:CLLocationManager
+    var locationManager = CLLocationManager()
+    var region = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: PROXIMITY_ID), identifier: "find.my.luggage")
     
     override init() {
-        println("Creating location manager")
-        locationManager = CLLocationManager()
-        
-        region = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "f7826da6-4fa2-4e98-8024-bc5b71e0893e"),
-            major: 1,
-            minor: 1000,
-            identifier: "Plecak")
-        
-//        region = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "f7826da6-4fa2-4e98-8024-bc5b71e0893e"), identifier:"My stuff")
-        
         super.init()
         
-        if(locationManager.respondsToSelector("requestAlwaysAuthorization")) {
-            locationManager.requestAlwaysAuthorization()
-        }
-        
+        locationManager.requestAlwaysAuthorization()
         locationManager.delegate = self
-        locationManager.startMonitoringForRegion(region)
         locationManager.startRangingBeaconsInRegion(region)
-        
     }
     
+    
+    // MARK: CLLocationManagerDelegate implementation
     
     func locationManager(manager: CLLocationManager!, didRangeBeacons beacons: [AnyObject]!, inRegion region: CLBeaconRegion!) {
-        
-        println("Got a beacon!")
-        
+        for beacon in beacons {
+            let luggageBeacon: LuggageBeacon = LuggageBeacon(name: "test", major: beacon.major, minor: beacon.minor)
+            println("Major: \(luggageBeacon.major), minor: \(luggageBeacon.minor)")
+        }
     }
-    
-    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
-        println("Error: \(error)")
-    }
-    
-    func locationManager(manager: CLLocationManager!, monitoringDidFailForRegion region: CLRegion!, withError error: NSError!) {
-        println("Monitoring did fail with error \(error)")
-    }
-    
     
 }
