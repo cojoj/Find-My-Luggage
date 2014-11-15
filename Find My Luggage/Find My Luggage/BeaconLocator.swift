@@ -39,7 +39,7 @@ class BeaconLocator : NSObject, CLLocationManagerDelegate {
     override init() {
         super.init()
         
-        locationManager.requestAlwaysAuthorization()
+        locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         locationManager.startRangingBeaconsInRegion(region)
