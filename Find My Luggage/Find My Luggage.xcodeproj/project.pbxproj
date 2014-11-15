@@ -65,6 +65,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		409F194E1A17944B00FC7B8A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		70B5F6DE1A17687B003155D4 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +93,7 @@
 		70B5F6E91A17687B003155D4 /* Find My Luggage */ = {
 			isa = PBXGroup;
 			children = (
+				409F194E1A17944B00FC7B8A /* UI */,
 				70B5F6EC1A17687B003155D4 /* AppDelegate.swift */,
 				70B5F6EE1A17687B003155D4 /* ViewController.swift */,
 				40B27D0F1A1774F70089DB77 /* BeaconLocator.swift */,
