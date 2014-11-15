@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreLocation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, BeanLocatorDelegate {
 
     
     @IBOutlet var immediateRangeView: UIView!
@@ -16,6 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet var farRangeView: UIView!
     
     var locator:BeaconLocator?
+    
+    var labels:[UILabel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,11 +34,13 @@ class ViewController: UIViewController {
         
         
         locator = BeaconLocator()
+        
+        locator?.delegate = self
     }
 
     func makeLabel(text:String, x:CGFloat, y:CGFloat) -> UILabel {
         let l = UILabel(frame: CGRectMake(10, 10, 100, 30))
-        l.font = UIFont.boldSystemFontOfSize(17)
+        l.font = UIFont.boldSystemFontOfSize(24)
         l.text = text
         l.textColor = UIColor.whiteColor()
         l.sizeToFit()
@@ -47,6 +52,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func found(beacons: [VisibleBeacon]) {
+        println(beacons)
+    }
 
 }
 

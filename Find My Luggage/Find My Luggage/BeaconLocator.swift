@@ -11,8 +11,14 @@ import CoreLocation
 
 let PROXIMITY_ID = "f7826da6-4fa2-4e98-8024-bc5b71e0893e"
 
+struct VisibleBeacon {
+    var luggageBeacon:LuggageBeacon
+    var proximity:CLProximity
+    var accuracy:CLLocationAccuracy
+}
+
 protocol BeanLocatorDelegate {
-    func locator(locator: BeanLocatorDelegate, didFound: LuggageBeacon, proximity:CLProximity, accuracy:CLLocationAccuracy)
+    func found(beacons:[VisibleBeacon])
 }
 
 class BeaconLocator : NSObject, CLLocationManagerDelegate {
@@ -20,7 +26,7 @@ class BeaconLocator : NSObject, CLLocationManagerDelegate {
     var locationManager = CLLocationManager()
     var region = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: PROXIMITY_ID), identifier: "find.my.luggage")
     var beaconManager = BeaconManager()
-    let delegate: BeanLocatorDelegate?
+    var delegate: BeanLocatorDelegate?
     
     override init() {
         super.init()
@@ -35,11 +41,23 @@ class BeaconLocator : NSObject, CLLocationManagerDelegate {
     // MARK: CLLocationManagerDelegate implementation
     
     func locationManager(manager: CLLocationManager!, didRangeBeacons beacons: [AnyObject]!, inRegion region: CLBeaconRegion!) {
-        for beacon in beacons {
-            if let luggageBeacon = beaconManager.contains(beacon as CLBeacon) {
-                delegate?.locator(delegate!, didFound: luggageBeacon, proximity: beacon.proximity, accuracy: beacon.accuracy)
-            }
-        }
+        
+        let allBeacons = beacons as [CLBeacon]
+        
+        let myBeacons = allBeacons.filter { self.beaconManager.contains($0) != nil }
+        
+        let visibleBeacons:[VisibleBeacon] = myBeacons.map( {
+            let myLuggageBeacon = self.beaconManager.contains($0)
+            return VisibleBeacon(luggageBeacon: myLuggageBeacon!, proximity: $0.proximity, accuracy: $0.accuracy)
+        } )
+
+        delegate?.found(visibleBeacons)
+        
+//        for beacon in beacons {
+//            if let luggageBeacon = beaconManager.contains(beacon as CLBeacon) {
+//                delegate?.locator(delegate!, didFound: luggageBeacon, proximity: beacon.proximity, accuracy: beacon.accuracy)
+//            }
+//        }
     }
     
 }
