@@ -181,11 +181,11 @@
 				TargetAttributes = {
 					70B5F6E61A17687B003155D4 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = G75289R4VK;
+						DevelopmentTeam = 4RH72U5FQ6;
 					};
 					70B5F6FB1A17687B003155D4 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = G75289R4VK;
+						DevelopmentTeam = 4RH72U5FQ6;
 						TestTargetID = 70B5F6E61A17687B003155D4;
 					};
 				};
