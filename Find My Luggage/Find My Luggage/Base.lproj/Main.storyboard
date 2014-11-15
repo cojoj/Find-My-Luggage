@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6246"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Find_My_Luggage" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,8 +16,63 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vIK-mQ-k9z" userLabel="FarArea">
+                                <rect key="frame" x="0.0" y="450" width="600" height="150"/>
+                                <color key="backgroundColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="192" id="G6S-NQ-dMJ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="G6S-NQ-dMJ"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sje-Xh-9u7" userLabel="NearArea">
+                                <rect key="frame" x="0.0" y="301" width="600" height="150"/>
+                                <color key="backgroundColor" red="0.66493055555555558" green="0.0" blue="0.0064135385308961646" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FZV-wH-Nbq" userLabel="ImmediateArea">
+                                <rect key="frame" x="0.0" y="151" width="600" height="150"/>
+                                <color key="backgroundColor" red="0.89901620370370372" green="0.0" blue="0.0086713943496494264" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Find my luggage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2Y-os-k5f">
+                                <rect key="frame" x="148" y="43" width="304" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.77060598544973546" green="0.77060598544973546" blue="0.77060598544973546" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Sje-Xh-9u7" firstAttribute="centerX" secondItem="vIK-mQ-k9z" secondAttribute="centerX" id="0Ok-gH-rYc"/>
+                            <constraint firstItem="Sje-Xh-9u7" firstAttribute="height" secondItem="vIK-mQ-k9z" secondAttribute="height" id="4G4-B5-jnh"/>
+                            <constraint firstItem="vIK-mQ-k9z" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Erj-LY-30X"/>
+                            <constraint firstItem="vIK-mQ-k9z" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.25" id="FM5-QV-KEs"/>
+                            <constraint firstAttribute="centerX" secondItem="E2Y-os-k5f" secondAttribute="centerX" id="HBI-2Z-xOW"/>
+                            <constraint firstItem="Sje-Xh-9u7" firstAttribute="top" secondItem="FZV-wH-Nbq" secondAttribute="bottom" id="LKm-Bc-yh5"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="vIK-mQ-k9z" secondAttribute="bottom" id="RJ3-PB-PD7"/>
+                            <constraint firstItem="vIK-mQ-k9z" firstAttribute="top" secondItem="Sje-Xh-9u7" secondAttribute="bottom" constant="-1" id="UgH-mo-Yys"/>
+                            <constraint firstItem="E2Y-os-k5f" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="23" id="Vlu-oS-GuL"/>
+                            <constraint firstItem="E2Y-os-k5f" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="W3u-C3-Ha4"/>
+                            <constraint firstItem="Sje-Xh-9u7" firstAttribute="centerX" secondItem="FZV-wH-Nbq" secondAttribute="centerX" id="g9i-CF-Taa"/>
+                            <constraint firstItem="Sje-Xh-9u7" firstAttribute="width" secondItem="FZV-wH-Nbq" secondAttribute="width" id="hZy-us-rJf"/>
+                            <constraint firstItem="Sje-Xh-9u7" firstAttribute="height" secondItem="FZV-wH-Nbq" secondAttribute="height" id="nuN-59-lyD"/>
+                            <constraint firstItem="Sje-Xh-9u7" firstAttribute="width" secondItem="vIK-mQ-k9z" secondAttribute="width" id="tME-Gl-XIp"/>
+                            <constraint firstAttribute="trailing" secondItem="vIK-mQ-k9z" secondAttribute="trailing" id="tnI-iX-GMI"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="W3u-C3-Ha4"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="farRangeView" destination="vIK-mQ-k9z" id="d6J-EO-tDM"/>
+                        <outlet property="immediateRangeView" destination="FZV-wH-Nbq" id="JfT-Lf-0Zx"/>
+                        <outlet property="nearRangeView" destination="Sje-Xh-9u7" id="96C-Ta-qnZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
