@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct LuggageBeacon {
     
@@ -18,6 +19,14 @@ struct LuggageBeacon {
         self.luggageName = name
         self.major = major
         self.minor = minor
+    }
+    
+    func isEqualToBeacon(beacon: CLBeacon) -> Bool {
+        if major == beacon.major && minor == beacon.minor {
+            return true
+        } else {
+            return false
+        }
     }
     
 }
