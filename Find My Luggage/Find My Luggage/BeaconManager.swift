@@ -12,7 +12,8 @@ import CoreLocation
 class BeaconManager: NSObject {
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
-    var luggageBeacons = [ LuggageBeacon(name: "Plecak", major: 1, minor: 1001),
+    var luggageBeacons = [ LuggageBeacon(name: "Backpack", major: 1, minor: 1001),
+                           LuggageBeacon(name: "Bag", major: 1, minor: 1000),
                            LuggageBeacon(name: "Czerwona walizka", major: 58138, minor: 46178) ]
     
     func contains(beacon: CLBeacon) -> LuggageBeacon? {

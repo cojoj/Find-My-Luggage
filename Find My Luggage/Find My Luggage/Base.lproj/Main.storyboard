@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B23" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2sc-Fg-nwU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2sc-Fg-nwU">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6246"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vIK-mQ-k9z" userLabel="FarArea">
-                                <rect key="frame" x="0.0" y="450" width="600" height="150"/>
+                                <rect key="frame" x="0.0" y="386" width="600" height="150"/>
                                 <color key="backgroundColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="192" id="G6S-NQ-dMJ"/>
@@ -30,15 +30,15 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sje-Xh-9u7" userLabel="NearArea">
-                                <rect key="frame" x="0.0" y="301" width="600" height="150"/>
+                                <rect key="frame" x="0.0" y="237" width="600" height="150"/>
                                 <color key="backgroundColor" red="0.66493055555555558" green="0.0" blue="0.0064135385308961646" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FZV-wH-Nbq" userLabel="ImmediateArea">
-                                <rect key="frame" x="0.0" y="151" width="600" height="150"/>
+                                <rect key="frame" x="0.0" y="87" width="600" height="150"/>
                                 <color key="backgroundColor" red="0.89901620370370372" green="0.0" blue="0.0086713943496494264" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="luggage" translatesAutoresizingMaskIntoConstraints="NO" id="jYs-0l-b9I">
-                                <rect key="frame" x="180" y="8" width="240" height="135"/>
+                                <rect key="frame" x="180" y="8" width="240" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="LfA-Qv-byf"/>
                                 </constraints>
@@ -47,12 +47,13 @@
                         <color key="backgroundColor" red="0.77060598544973546" green="0.77060598544973546" blue="0.77060598544973546" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Sje-Xh-9u7" firstAttribute="centerX" secondItem="vIK-mQ-k9z" secondAttribute="centerX" id="0Ok-gH-rYc"/>
+                            <constraint firstItem="FZV-wH-Nbq" firstAttribute="top" secondItem="jYs-0l-b9I" secondAttribute="bottom" constant="13" id="3kO-hK-AZq"/>
                             <constraint firstItem="Sje-Xh-9u7" firstAttribute="height" secondItem="vIK-mQ-k9z" secondAttribute="height" id="4G4-B5-jnh"/>
                             <constraint firstItem="vIK-mQ-k9z" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Erj-LY-30X"/>
                             <constraint firstItem="vIK-mQ-k9z" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.25" constant="16" id="FM5-QV-KEs"/>
                             <constraint firstItem="Sje-Xh-9u7" firstAttribute="top" secondItem="FZV-wH-Nbq" secondAttribute="bottom" id="LKm-Bc-yh5"/>
                             <constraint firstItem="jYs-0l-b9I" firstAttribute="centerX" secondItem="FZV-wH-Nbq" secondAttribute="centerX" id="Lo9-f3-OHK"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="vIK-mQ-k9z" secondAttribute="bottom" constant="-64" id="RJ3-PB-PD7"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="vIK-mQ-k9z" secondAttribute="bottom" id="RJ3-PB-PD7"/>
                             <constraint firstItem="vIK-mQ-k9z" firstAttribute="top" secondItem="Sje-Xh-9u7" secondAttribute="bottom" constant="-1" id="UgH-mo-Yys"/>
                             <constraint firstItem="jYs-0l-b9I" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="bsQ-k1-fMM"/>
                             <constraint firstItem="Sje-Xh-9u7" firstAttribute="centerX" secondItem="FZV-wH-Nbq" secondAttribute="centerX" id="g9i-CF-Taa"/>
@@ -62,6 +63,11 @@
                             <constraint firstItem="Sje-Xh-9u7" firstAttribute="width" secondItem="vIK-mQ-k9z" secondAttribute="width" id="tME-Gl-XIp"/>
                             <constraint firstAttribute="trailing" secondItem="vIK-mQ-k9z" secondAttribute="trailing" id="tnI-iX-GMI"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="gE0-4t-bQT"/>
+                            </mask>
+                        </variation>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Find My Luggage" id="oP7-7Q-ggE">
