@@ -68,13 +68,13 @@ class ViewController: UIViewController, BeanLocatorDelegate {
     
     func placeLabelFor(beacon:VisibleBeacon) {
 
-        let howmany = counts[beacon.proximity]
-        let ypos = CGFloat(howmany!) * 24.0 + 10.0
+        let howmany = counts[beacon.proximity] ?? 0
+        let ypos = CGFloat(howmany) * 24.0 + 10.0
         let label = makeLabel(beacon.name() + " " + beacon.formattedRange(), x: 10, y: ypos)
 
         println("Label \(beacon.name()) \(ypos) \(howmany)")
 
-        counts[beacon.proximity] = howmany! + 1
+        counts[beacon.proximity] = howmany + 1
         
         switch (beacon.proximity) {
         case CLProximity.Immediate:
