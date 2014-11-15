@@ -19,6 +19,7 @@ class ViewController: UIViewController, BeanLocatorDelegate {
     var locator:BeaconLocator?
     
     var labels:[UILabel] = []
+    var counts:Dictionary<CLProximity,Int> = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +29,6 @@ class ViewController: UIViewController, BeanLocatorDelegate {
         
         
         
-        let l = makeLabel("✿ Plecak 3,56m", x: 10, y: 10)
-        immediateRangeView.addSubview(l)
-        
-        
         
         locator = BeaconLocator()
         
@@ -39,7 +36,7 @@ class ViewController: UIViewController, BeanLocatorDelegate {
     }
 
     func makeLabel(text:String, x:CGFloat, y:CGFloat) -> UILabel {
-        let l = UILabel(frame: CGRectMake(10, 10, 100, 30))
+        let l = UILabel(frame: CGRectMake(x, y, 0, 0))
         l.font = UIFont.boldSystemFontOfSize(24)
         l.text = text
         l.textColor = UIColor.whiteColor()
@@ -59,6 +56,7 @@ class ViewController: UIViewController, BeanLocatorDelegate {
         }
         
         labels.removeAll(keepCapacity: false)
+        self.counts = [ CLProximity.Far:0, CLProximity.Immediate:0, CLProximity.Near:0 ]
 
         for beacon in beacons {
             placeLabelFor(beacon)
@@ -69,8 +67,14 @@ class ViewController: UIViewController, BeanLocatorDelegate {
 
     
     func placeLabelFor(beacon:VisibleBeacon) {
-     
-        let label = makeLabel(beacon.name() + " " + beacon.formattedRange(), x: 10, y: 10)
+
+        let howmany = counts[beacon.proximity]
+        let ypos = CGFloat(howmany!) * 24.0 + 10.0
+        let label = makeLabel(beacon.name() + " " + beacon.formattedRange(), x: 10, y: ypos)
+
+        println("Label \(beacon.name()) \(ypos) \(howmany)")
+
+        counts[beacon.proximity] = howmany! + 1
         
         switch (beacon.proximity) {
         case CLProximity.Immediate:
