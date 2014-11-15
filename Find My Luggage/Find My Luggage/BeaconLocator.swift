@@ -15,6 +15,14 @@ struct VisibleBeacon {
     var luggageBeacon:LuggageBeacon
     var proximity:CLProximity
     var accuracy:CLLocationAccuracy
+    
+    func formattedRange() -> String {
+        return String(format: "%.2f m", arguments: [accuracy])
+    }
+    
+    func name() -> String {
+        return luggageBeacon.name
+    }
 }
 
 protocol BeanLocatorDelegate {

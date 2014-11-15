@@ -46,6 +46,7 @@ class ViewController: UIViewController, BeanLocatorDelegate {
         l.sizeToFit()
         return l
     }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -53,8 +54,39 @@ class ViewController: UIViewController, BeanLocatorDelegate {
     }
 
     func found(beacons: [VisibleBeacon]) {
-        println(beacons)
+        for label in labels {
+            label.removeFromSuperview()
+        }
+        
+        labels.removeAll(keepCapacity: false)
+
+        for beacon in beacons {
+            placeLabelFor(beacon)
+
+        }
+
     }
 
+    
+    func placeLabelFor(beacon:VisibleBeacon) {
+     
+        let label = makeLabel(beacon.name() + " " + beacon.formattedRange(), x: 10, y: 10)
+        
+        switch (beacon.proximity) {
+        case CLProximity.Immediate:
+            immediateRangeView.addSubview(label)
+        case .Near:
+            nearRangeView.addSubview(label)
+        case .Far:
+            farRangeView.addSubview(label)
+        default:
+            println("Dupa")
+            
+        }
+
+        labels.append(label)
+    }
+    
+    
 }
 
