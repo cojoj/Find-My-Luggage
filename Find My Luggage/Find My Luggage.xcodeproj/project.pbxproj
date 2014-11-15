@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		70B5F6ED1A17687B003155D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B5F6EC1A17687B003155D4 /* AppDelegate.swift */; };
+		70B5F6EF1A17687B003155D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B5F6EE1A17687B003155D4 /* ViewController.swift */; };
+		70B5F6F21A17687B003155D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70B5F6F01A17687B003155D4 /* Main.storyboard */; };
+		70B5F6F41A17687B003155D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B5F6F31A17687B003155D4 /* Images.xcassets */; };
+		70B5F6F71A17687B003155D4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70B5F6F51A17687B003155D4 /* LaunchScreen.xib */; };
+		70B5F7031A17687B003155D4 /* Find_My_LuggageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B5F7021A17687B003155D4 /* Find_My_LuggageTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		70B5F6FD1A17687B003155D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70B5F6DF1A17687B003155D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70B5F6E61A17687B003155D4;
+			remoteInfo = "Find My Luggage";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		70B5F6E71A17687B003155D4 /* Find My Luggage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find My Luggage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		70B5F6EB1A17687B003155D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70B5F6EC1A17687B003155D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		70B5F6EE1A17687B003155D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		70B5F6F11A17687B003155D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		70B5F6F31A17687B003155D4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		70B5F6F61A17687B003155D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		70B5F6FC1A17687B003155D4 /* Find My LuggageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Find My LuggageTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		70B5F7011A17687B003155D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70B5F7021A17687B003155D4 /* Find_My_LuggageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Find_My_LuggageTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70B5F6E41A17687B003155D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70B5F6F91A17687B003155D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		70B5F6DE1A17687B003155D4 = {
+			isa = PBXGroup;
+			children = (
+				70B5F6E91A17687B003155D4 /* Find My Luggage */,
+				70B5F6FF1A17687B003155D4 /* Find My LuggageTests */,
+				70B5F6E81A17687B003155D4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		70B5F6E81A17687B003155D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70B5F6E71A17687B003155D4 /* Find My Luggage.app */,
+				70B5F6FC1A17687B003155D4 /* Find My LuggageTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70B5F6E91A17687B003155D4 /* Find My Luggage */ = {
+			isa = PBXGroup;
+			children = (
+				70B5F6EC1A17687B003155D4 /* AppDelegate.swift */,
+				70B5F6EE1A17687B003155D4 /* ViewController.swift */,
+				70B5F6F01A17687B003155D4 /* Main.storyboard */,
+				70B5F6F31A17687B003155D4 /* Images.xcassets */,
+				70B5F6F51A17687B003155D4 /* LaunchScreen.xib */,
+				70B5F6EA1A17687B003155D4 /* Supporting Files */,
+			);
+			path = "Find My Luggage";
+			sourceTree = "<group>";
+		};
+		70B5F6EA1A17687B003155D4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				70B5F6EB1A17687B003155D4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		70B5F6FF1A17687B003155D4 /* Find My LuggageTests */ = {
+			isa = PBXGroup;
+			children = (
+				70B5F7021A17687B003155D4 /* Find_My_LuggageTests.swift */,
+				70B5F7001A17687B003155D4 /* Supporting Files */,
+			);
+			path = "Find My LuggageTests";
+			sourceTree = "<group>";
+		};
+		70B5F7001A17687B003155D4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				70B5F7011A17687B003155D4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		70B5F6E61A17687B003155D4 /* Find My Luggage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70B5F7061A17687B003155D4 /* Build configuration list for PBXNativeTarget "Find My Luggage" */;
+			buildPhases = (
+				70B5F6E31A17687B003155D4 /* Sources */,
+				70B5F6E41A17687B003155D4 /* Frameworks */,
+				70B5F6E51A17687B003155D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Find My Luggage";
+			productName = "Find My Luggage";
+			productReference = 70B5F6E71A17687B003155D4 /* Find My Luggage.app */;
+			productType = "com.apple.product-type.application";
+		};
+		70B5F6FB1A17687B003155D4 /* Find My LuggageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70B5F7091A17687B003155D4 /* Build configuration list for PBXNativeTarget "Find My LuggageTests" */;
+			buildPhases = (
+				70B5F6F81A17687B003155D4 /* Sources */,
+				70B5F6F91A17687B003155D4 /* Frameworks */,
+				70B5F6FA1A17687B003155D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70B5F6FE1A17687B003155D4 /* PBXTargetDependency */,
+			);
+			name = "Find My LuggageTests";
+			productName = "Find My LuggageTests";
+			productReference = 70B5F6FC1A17687B003155D4 /* Find My LuggageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70B5F6DF1A17687B003155D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				TargetAttributes = {
+					70B5F6E61A17687B003155D4 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					70B5F6FB1A17687B003155D4 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 70B5F6E61A17687B003155D4;
+					};
+				};
+			};
+			buildConfigurationList = 70B5F6E21A17687B003155D4 /* Build configuration list for PBXProject "Find My Luggage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 70B5F6DE1A17687B003155D4;
+			productRefGroup = 70B5F6E81A17687B003155D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				70B5F6E61A17687B003155D4 /* Find My Luggage */,
+				70B5F6FB1A17687B003155D4 /* Find My LuggageTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		70B5F6E51A17687B003155D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70B5F6F21A17687B003155D4 /* Main.storyboard in Resources */,
+				70B5F6F71A17687B003155D4 /* LaunchScreen.xib in Resources */,
+				70B5F6F41A17687B003155D4 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70B5F6FA1A17687B003155D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70B5F6E31A17687B003155D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70B5F6EF1A17687B003155D4 /* ViewController.swift in Sources */,
+				70B5F6ED1A17687B003155D4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70B5F6F81A17687B003155D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70B5F7031A17687B003155D4 /* Find_My_LuggageTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		70B5F6FE1A17687B003155D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70B5F6E61A17687B003155D4 /* Find My Luggage */;
+			targetProxy = 70B5F6FD1A17687B003155D4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		70B5F6F01A17687B003155D4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70B5F6F11A17687B003155D4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		70B5F6F51A17687B003155D4 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70B5F6F61A17687B003155D4 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		70B5F7041A17687B003155D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		70B5F7051A17687B003155D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		70B5F7071A17687B003155D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Find My Luggage/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		70B5F7081A17687B003155D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Find My Luggage/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		70B5F70A1A17687B003155D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Find My LuggageTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Find My Luggage.app/Find My Luggage";
+			};
+			name = Debug;
+		};
+		70B5F70B1A17687B003155D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Find My LuggageTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Find My Luggage.app/Find My Luggage";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70B5F6E21A17687B003155D4 /* Build configuration list for PBXProject "Find My Luggage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70B5F7041A17687B003155D4 /* Debug */,
+				70B5F7051A17687B003155D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70B5F7061A17687B003155D4 /* Build configuration list for PBXNativeTarget "Find My Luggage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70B5F7071A17687B003155D4 /* Debug */,
+				70B5F7081A17687B003155D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		70B5F7091A17687B003155D4 /* Build configuration list for PBXNativeTarget "Find My LuggageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70B5F70A1A17687B003155D4 /* Debug */,
+				70B5F70B1A17687B003155D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 70B5F6DF1A17687B003155D4 /* Project object */;
+}
