@@ -10,6 +10,12 @@ import UIKit
 
 class AddBeaconVC: UIViewController {
 
+    
+
+    @IBOutlet var nameField: UITextField!
+    
+    @IBOutlet var takeItLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

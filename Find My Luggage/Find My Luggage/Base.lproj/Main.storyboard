@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B23" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2sc-Fg-nwU">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6246"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -110,7 +111,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fnh-sM-nd9">
-                                <rect key="frame" x="277" y="435" width="37" height="30"/>
+                                <rect key="frame" x="278" y="531" width="45" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Done">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -118,13 +120,54 @@
                                     <action selector="doneTapped:" destination="CdT-NE-Og7" eventType="touchUpInside" id="mb0-ar-Igy"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place your Beacon here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dJ-W5-qIQ">
+                                <rect key="frame" x="177" y="286" width="247" height="29"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name your beacon" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3g8-Hc-Nbv">
+                                <rect key="frame" x="16" y="52" width="568" height="29"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good! Now take it." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaZ-k7-uTS">
+                                <rect key="frame" x="16" y="494" width="568" height="29"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="Fnh-sM-nd9" secondAttribute="centerX" constant="4.5" id="XuI-sY-f3y"/>
-                            <constraint firstItem="ZiJ-9M-3Zk" firstAttribute="top" secondItem="Fnh-sM-nd9" secondAttribute="bottom" constant="135" id="wwG-KU-REP"/>
+                            <constraint firstItem="Fnh-sM-nd9" firstAttribute="top" secondItem="aaZ-k7-uTS" secondAttribute="bottom" constant="8" id="083-ZA-2Ut"/>
+                            <constraint firstItem="3g8-Hc-Nbv" firstAttribute="leading" secondItem="CS4-Ze-C4C" secondAttribute="leadingMargin" id="3GR-q6-jqN"/>
+                            <constraint firstAttribute="centerY" secondItem="8dJ-W5-qIQ" secondAttribute="centerY" constant="-0.5" id="42d-vJ-qnJ"/>
+                            <constraint firstItem="3g8-Hc-Nbv" firstAttribute="top" secondItem="cwF-dA-9HT" secondAttribute="bottom" constant="32" id="O6M-Eh-3RX"/>
+                            <constraint firstAttribute="centerX" secondItem="Fnh-sM-nd9" secondAttribute="centerX" constant="-0.5" id="XuI-sY-f3y"/>
+                            <constraint firstItem="3g8-Hc-Nbv" firstAttribute="trailing" secondItem="CS4-Ze-C4C" secondAttribute="trailingMargin" id="YEM-v3-253"/>
+                            <constraint firstItem="Fnh-sM-nd9" firstAttribute="top" secondItem="3g8-Hc-Nbv" secondAttribute="bottom" constant="8" id="Ytu-Gy-mFL"/>
+                            <constraint firstItem="3g8-Hc-Nbv" firstAttribute="trailing" secondItem="CS4-Ze-C4C" secondAttribute="trailingMargin" id="bgL-99-4Y6"/>
+                            <constraint firstItem="aaZ-k7-uTS" firstAttribute="leading" secondItem="CS4-Ze-C4C" secondAttribute="leadingMargin" id="eQf-Kw-uyj"/>
+                            <constraint firstItem="3g8-Hc-Nbv" firstAttribute="leading" secondItem="CS4-Ze-C4C" secondAttribute="leadingMargin" id="iqt-sh-ryz"/>
+                            <constraint firstItem="aaZ-k7-uTS" firstAttribute="trailing" secondItem="CS4-Ze-C4C" secondAttribute="trailingMargin" id="ngY-qW-gxM"/>
+                            <constraint firstAttribute="centerX" secondItem="8dJ-W5-qIQ" secondAttribute="centerX" constant="-0.5" id="vvd-e6-3jd"/>
+                            <constraint firstItem="ZiJ-9M-3Zk" firstAttribute="top" secondItem="Fnh-sM-nd9" secondAttribute="bottom" constant="34" id="wwG-KU-REP"/>
+                            <constraint firstAttribute="centerX" secondItem="3g8-Hc-Nbv" secondAttribute="centerX" constant="-0.5" id="wzx-sc-7ef"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3GR-q6-jqN"/>
+                                <exclude reference="YEM-v3-253"/>
+                                <exclude reference="wzx-sc-7ef"/>
+                                <exclude reference="Ytu-Gy-mFL"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="nameField" destination="3g8-Hc-Nbv" id="swJ-Hh-Ee0"/>
+                        <outlet property="takeItLabel" destination="aaZ-k7-uTS" id="4Ld-iZ-VHW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qut-dH-uqz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
