@@ -27,9 +27,6 @@ class ViewController: UIViewController, BeanLocatorDelegate {
         
         println("Immediate: \(immediateRangeView.frame)")
         
-        
-        
-        
         locator = BeaconLocator()
         
         locator?.delegate = self
@@ -90,7 +87,11 @@ class ViewController: UIViewController, BeanLocatorDelegate {
 
         labels.append(label)
     }
-    
-    
+
+    // MARK: Mock method
+    @IBAction func luggageTapped(sender: AnyObject) {
+        locator?.beaconManager.saveMock()
+    }
+
 }
 

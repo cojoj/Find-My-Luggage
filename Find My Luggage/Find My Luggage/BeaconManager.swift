@@ -12,9 +12,20 @@ import CoreLocation
 class BeaconManager: NSObject {
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
-    var luggageBeacons = [ LuggageBeacon(name: "Backpack", major: 1, minor: 1001),
+    var luggageBeacons: [LuggageBeacon] = []/* = [ LuggageBeacon(name: "Backpack", major: 1, minor: 1001),
                            LuggageBeacon(name: "Bag", major: 1, minor: 1000),
-                           LuggageBeacon(name: "Czerwona walizka", major: 58138, minor: 46178) ]
+                           LuggageBeacon(name: "Czerwona walizka", major: 58138, minor: 46178) ] */
+    
+    override init() {
+        super.init()
+        
+        if let beaconsInUserDefaults = userDefaults.arrayForKey("MyLuggageBeacons") as? [Dictionary<String, AnyObject>] {
+            println(beaconsInUserDefaults)
+            for userBeacon in beaconsInUserDefaults {
+                luggageBeacons.append(LuggageBeacon(name: userBeacon["name"] as String, major: userBeacon["major"] as NSNumber , minor: userBeacon["minor"] as NSNumber))
+            }
+        }
+    }
     
     func contains(beacon: CLBeacon) -> LuggageBeacon? {
         for luggageBeacon in self.luggageBeacons {
@@ -24,6 +35,33 @@ class BeaconManager: NSObject {
         }
         
         return nil
+    }
+    
+    func save() {
+        var beaconsArray: [Dictionary<String, AnyObject>] = []
+        
+        for beacon in luggageBeacons {
+            beaconsArray.append(["name": beacon.name, "major": beacon.major, "minor": beacon.minor])
+        }
+        
+        userDefaults.setObject(beaconsArray, forKey: "MyLuggageBeacons")
+        userDefaults.synchronize()
+    }
+    
+    // MARK: Mock User Defaults
+    
+    func saveMock() {
+        luggageBeacons = [ LuggageBeacon(name: "Backpack", major: 1, minor: 1001),
+                           LuggageBeacon(name: "Bag", major: 1, minor: 1000),
+                           LuggageBeacon(name: "Czerwona walizka", major: 58138, minor: 46178) ]
+        var beaconsArray: [Dictionary<String, AnyObject>] = []
+        
+        for beacon in luggageBeacons {
+            beaconsArray.append(["name": beacon.name, "major": beacon.major, "minor": beacon.minor])
+        }
+        
+        userDefaults.setObject(beaconsArray, forKey: "MyLuggageBeacons")
+        userDefaults.synchronize()
     }
     
 }
