@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class ViewController: UIViewController, BeanLocatorDelegate {
+class ViewController: UIViewController, MyBeanLocatorDelegate {
 
     
     @IBOutlet var immediateRangeView: UIView!
@@ -29,7 +29,7 @@ class ViewController: UIViewController, BeanLocatorDelegate {
         
         locator = BeaconLocator()
         
-        locator?.delegate = self
+        locator?.myBeanDelegate = self
     }
 
     func makeLabel(text:String, x:CGFloat, y:CGFloat) -> UILabel {

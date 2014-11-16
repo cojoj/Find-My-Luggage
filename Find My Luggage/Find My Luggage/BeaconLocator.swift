@@ -25,8 +25,12 @@ struct VisibleBeacon {
     }
 }
 
-protocol BeanLocatorDelegate {
+protocol MyBeanLocatorDelegate {
     func found(beacons:[VisibleBeacon])
+}
+
+protocol BeanLocatorDelegate {
+    func foundAllBeacons(beacons: [CLBeacon]?)
 }
 
 class BeaconLocator : NSObject, CLLocationManagerDelegate {
@@ -34,7 +38,8 @@ class BeaconLocator : NSObject, CLLocationManagerDelegate {
     var locationManager = CLLocationManager()
     var region = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: PROXIMITY_ID), identifier: "find.my.luggage")
     var beaconManager = BeaconManager()
-    var delegate: BeanLocatorDelegate?
+    var beanDelegate: BeanLocatorDelegate?
+    var myBeanDelegate: MyBeanLocatorDelegate?
     
     override init() {
         super.init()
@@ -52,6 +57,8 @@ class BeaconLocator : NSObject, CLLocationManagerDelegate {
         
         let allBeacons = beacons as [CLBeacon]
         
+        beanDelegate?.foundAllBeacons(allBeacons)
+        
         let myBeacons = allBeacons.filter { self.beaconManager.contains($0) != nil }
         
         let visibleBeacons:[VisibleBeacon] = myBeacons.map( {
@@ -59,7 +66,7 @@ class BeaconLocator : NSObject, CLLocationManagerDelegate {
             return VisibleBeacon(luggageBeacon: myLuggageBeacon!, proximity: $0.proximity, accuracy: $0.accuracy)
         } )
 
-        delegate?.found(visibleBeacons)
+        myBeanDelegate?.found(visibleBeacons)
         
 //        for beacon in beacons {
 //            if let luggageBeacon = beaconManager.contains(beacon as CLBeacon) {

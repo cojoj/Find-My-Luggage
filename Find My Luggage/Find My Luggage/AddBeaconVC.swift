@@ -7,14 +7,13 @@
 //
 
 import UIKit
+import CoreLocation
 
-class AddBeaconVC: UIViewController {
-
-    
+class AddBeaconVC: UIViewController, BeanLocatorDelegate {
 
     @IBOutlet var nameField: UITextField!
-    
     @IBOutlet var takeItLabel: UILabel!
+    var beaconLocator = BeaconLocator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +28,14 @@ class AddBeaconVC: UIViewController {
     
 
     @IBAction func doneTapped(sender: AnyObject) {
+        
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    func foundAllBeacons(beacons: [CLBeacon]?) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 

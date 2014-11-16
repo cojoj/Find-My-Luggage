@@ -49,9 +49,9 @@ class BeaconManager: NSObject {
     func delete(beacon: LuggageBeacon) {
         luggageBeacons = luggageBeacons.filter({ (element) -> Bool in
             if element.name == beacon.name && element.major == beacon.major && element.minor == beacon.minor {
-                return true
-            } else {
                 return false
+            } else {
+                return true
             }
         })
         
