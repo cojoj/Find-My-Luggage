@@ -12,9 +12,7 @@ import CoreLocation
 class BeaconManager: NSObject {
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
-    var luggageBeacons: [LuggageBeacon] = []/* = [ LuggageBeacon(name: "Backpack", major: 1, minor: 1001),
-                           LuggageBeacon(name: "Bag", major: 1, minor: 1000),
-                           LuggageBeacon(name: "Czerwona walizka", major: 58138, minor: 46178) ] */
+    var luggageBeacons: [LuggageBeacon] = []
     
     override init() {
         super.init()
@@ -48,12 +46,25 @@ class BeaconManager: NSObject {
         userDefaults.synchronize()
     }
     
+    func delete(beacon: LuggageBeacon) {
+        luggageBeacons = luggageBeacons.filter({ (element) -> Bool in
+            if element.name == beacon.name && element.major == beacon.major && element.minor == beacon.minor {
+                return true
+            } else {
+                return false
+            }
+        })
+        
+        save()
+    }
+    
     // MARK: Mock User Defaults
     
     func saveMock() {
         luggageBeacons = [ LuggageBeacon(name: "Backpack", major: 1, minor: 1001),
                            LuggageBeacon(name: "Bag", major: 1, minor: 1000),
                            LuggageBeacon(name: "Czerwona walizka", major: 58138, minor: 46178) ]
+        
         var beaconsArray: [Dictionary<String, AnyObject>] = []
         
         for beacon in luggageBeacons {
