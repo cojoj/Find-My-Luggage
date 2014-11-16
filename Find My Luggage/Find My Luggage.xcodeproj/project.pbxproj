@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		409F194B1A177E2B00FC7B8A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409F194A1A177E2B00FC7B8A /* CoreLocation.framework */; };
 		40B27D101A1774F70089DB77 /* BeaconLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B27D0F1A1774F70089DB77 /* BeaconLocator.swift */; };
+		40C7F35F1A18C42900F1C277 /* BeaconListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7F35E1A18C42900F1C277 /* BeaconListVC.swift */; };
+		40C7F3611A18C43F00F1C277 /* AddBeaconVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7F3601A18C43F00F1C277 /* AddBeaconVC.swift */; };
 		70B5F6ED1A17687B003155D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B5F6EC1A17687B003155D4 /* AppDelegate.swift */; };
 		70B5F6EF1A17687B003155D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B5F6EE1A17687B003155D4 /* ViewController.swift */; };
 		70B5F6F21A17687B003155D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70B5F6F01A17687B003155D4 /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 /* Begin PBXFileReference section */
 		409F194A1A177E2B00FC7B8A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		40B27D0F1A1774F70089DB77 /* BeaconLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconLocator.swift; sourceTree = "<group>"; };
+		40C7F35E1A18C42900F1C277 /* BeaconListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconListVC.swift; sourceTree = "<group>"; };
+		40C7F3601A18C43F00F1C277 /* AddBeaconVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBeaconVC.swift; sourceTree = "<group>"; };
 		70B5F6E71A17687B003155D4 /* Find My Luggage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find My Luggage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B5F6EB1A17687B003155D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70B5F6EC1A17687B003155D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				70B5F6F31A17687B003155D4 /* Images.xcassets */,
 				70B5F6F51A17687B003155D4 /* LaunchScreen.xib */,
 				70B5F6EA1A17687B003155D4 /* Supporting Files */,
+				40C7F35E1A18C42900F1C277 /* BeaconListVC.swift */,
+				40C7F3601A18C43F00F1C277 /* AddBeaconVC.swift */,
 			);
 			path = "Find My Luggage";
 			sourceTree = "<group>";
@@ -234,11 +240,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40C7F35F1A18C42900F1C277 /* BeaconListVC.swift in Sources */,
 				40B27D101A1774F70089DB77 /* BeaconLocator.swift in Sources */,
 				70B5F6EF1A17687B003155D4 /* ViewController.swift in Sources */,
 				70D5C69A1A179759005699C5 /* LuggageBeacon.swift in Sources */,
 				70D5C69C1A179B31005699C5 /* BeaconManager.swift in Sources */,
 				70B5F6ED1A17687B003155D4 /* AppDelegate.swift in Sources */,
+				40C7F3611A18C43F00F1C277 /* AddBeaconVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
